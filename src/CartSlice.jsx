@@ -25,7 +25,7 @@ export const CartSlice = createSlice({
         const {name, quantity} = action.payload
         const itemExist = state.items.find(item => item.name === name)
         
-          if(itemExist && itemExist.quantity >= 0){
+          if(itemExist){
             itemExist.quantity = quantity
           }
     },
